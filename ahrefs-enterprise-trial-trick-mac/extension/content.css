@@ -1,0 +1,382 @@
+html[data-ex-connected="true"],
+html[data-ex-connected="true"] body,
+html[data-ex-connected="true"] body * {
+  font-family: var(--ex-font) !important;
+}
+
+html[data-ex-connected="true"] body {
+  background: var(--ex-bg) !important;
+  color: var(--ex-text) !important;
+}
+
+#ex-creator-widget {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  color: var(--ex-text);
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+}
+
+#ex-creator-widget * {
+  box-sizing: border-box;
+}
+
+.ex-launch {
+  min-width: 154px;
+  max-width: min(260px, calc(100vw - 36px));
+  height: 48px;
+  border: 0;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--ex-accent), color-mix(in srgb, var(--ex-accent) 58%, #111827));
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, .22);
+  cursor: pointer;
+}
+
+.ex-launch-mark {
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,.24);
+  font-size: 17px;
+  line-height: 1;
+}
+
+.ex-launch-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ex-panel {
+  width: min(330px, calc(100vw - 36px));
+  margin-bottom: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--ex-panel);
+  border: 1px solid rgba(15, 23, 42, .12);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, .22);
+  display: grid;
+  gap: 12px;
+}
+
+.ex-panel[hidden] {
+  display: none;
+}
+
+.ex-lock {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ex-text);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.72);
+  backdrop-filter: blur(10px);
+}
+
+.ex-lock[hidden],
+.ex-body[hidden],
+.ex-message-btn[hidden] {
+  display: none !important;
+}
+
+.ex-lock-title {
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.ex-ip-card {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.76);
+}
+
+.ex-ip-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.ex-ip-value {
+  padding: 8px;
+  border-radius: 7px;
+  background: rgba(15, 23, 42, 0.06);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.ex-copy,
+.ex-connect {
+  border: 0;
+  border-radius: 8px;
+  background: var(--ex-accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.ex-copy {
+  padding: 6px 9px;
+  font-size: 11px;
+}
+
+.ex-connect {
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.ex-help,
+.ex-status {
+  font-size: 12px;
+  line-height: 1.45;
+  color: rgba(15, 23, 42, 0.74);
+}
+
+.ex-help a {
+  color: var(--ex-accent);
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.ex-field {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.ex-field input {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-radius: 8px;
+  padding: 10px;
+  font: inherit;
+  color: var(--ex-text);
+  background: #fff;
+}
+
+.ex-body {
+  display: grid;
+  gap: 12px;
+}
+
+.ex-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+}
+
+.ex-section {
+  border: 1px solid rgba(15, 23, 42, .12);
+  border-radius: 8px;
+  padding: 10px;
+  background: color-mix(in srgb, var(--ex-panel) 92%, var(--ex-accent));
+}
+
+.ex-section summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 900;
+  list-style-position: inside;
+}
+
+.ex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.ex-chip {
+  border: 1px solid rgba(15, 23, 42, .16);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ex-text);
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ex-chip[data-active="true"] {
+  border-color: var(--ex-accent);
+  background: color-mix(in srgb, var(--ex-accent) 14%, transparent);
+  color: var(--ex-accent);
+}
+
+.ex-primary {
+  border: 0;
+  border-radius: 8px;
+  background: var(--ex-accent);
+  color: #fff;
+  padding: 9px 10px;
+  font-weight: 800;
+  width: 100%;
+  cursor: pointer;
+}
+
+.ex-primary.ex-proxy-first {
+  background: #16a34a;
+  box-shadow: 0 10px 24px rgba(22, 163, 74, .22);
+}
+
+.ex-danger {
+  border: 1px solid rgba(190, 18, 60, .22);
+  border-radius: 8px;
+  background: rgba(255, 241, 242, .82);
+  color: #be123c;
+  padding: 9px 10px;
+  font-weight: 900;
+  width: 100%;
+  cursor: pointer;
+}
+
+.ex-loader {
+  text-align: center;
+  color: var(--ex-accent);
+  font-weight: 900;
+}
+
+.ex-message {
+  border: 1px solid rgba(15, 23, 42, .12);
+  border-radius: 8px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.ex-message[hidden],
+.ex-loader[hidden] {
+  display: none;
+}
+
+.ex-message a {
+  color: var(--ex-accent);
+  font-weight: 800;
+}
+
+.ex-message.proxy-second {
+  border-color: rgba(190, 18, 60, .24);
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.ex-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 8px 0 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ex-text);
+  position: relative;
+  z-index: 2147483646;
+  clear: both;
+  width: auto;
+  max-width: 100%;
+}
+
+.ex-banner[hidden] {
+  display: none;
+}
+
+.ex-banner-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ex-banner-dot {
+  font-size: 12px;
+  line-height: 1;
+  color: #16a34a;
+  animation: exBlink 1s steps(2, start) infinite;
+}
+
+.ex-banner-copy {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body button:not(.ex-chip):not(.ex-primary):not(.ex-danger):not(.ex-launch):not(.message-button):not(.copy-btn):not(.primary-btn):not(.danger-btn):not(.icon-btn):not(.ex-copy):not(.ex-connect),
+body a.button:not(.ex-creator-download-button):not(.ex-chip):not(.ex-primary):not(.ex-danger):not(.ex-launch):not(.message-button):not(.copy-btn):not(.primary-btn):not(.danger-btn):not(.icon-btn):not(.ex-copy):not(.ex-connect),
+body a.wp-block-button__link:not(.ex-creator-download-button):not(.ex-chip):not(.ex-primary):not(.ex-danger):not(.ex-launch):not(.message-button):not(.copy-btn):not(.primary-btn):not(.danger-btn):not(.icon-btn):not(.ex-copy):not(.ex-connect),
+body .wp-element-button:not(.ex-chip):not(.ex-primary):not(.ex-danger):not(.ex-launch):not(.message-button):not(.copy-btn):not(.primary-btn):not(.danger-btn):not(.icon-btn):not(.ex-copy):not(.ex-connect),
+body input[type="submit"]:not(.ex-primary):not(.ex-danger),
+body input[type="button"]:not(.ex-primary):not(.ex-danger),
+body input[type="reset"]:not(.ex-primary):not(.ex-danger) {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  border: 1px solid rgb(209,213,219) !important;
+  border-radius: .5rem !important;
+  box-sizing: border-box !important;
+  color: #111827 !important;
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  font-size: .875rem !important;
+  line-height: 1.25rem !important;
+  padding: .75rem 1rem !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05) !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+  display: inline-block !important;
+  transition: .2s ease !important;
+}
+
+body img:not(#ex-creator-widget img) {
+  border: 1px solid rgba(156,163,175,.45) !important;
+  border-radius: 10px !important;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,.08) !important,
+    0 10px 24px rgba(0,0,0,.08) !important,
+    inset 0 1px 0 rgba(255,255,255,.7) !important;
+  background: #fff !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+#ex-creator-widget .ex-copy,
+#ex-creator-widget .ex-connect {
+  border: 0 !important;
+  background: var(--ex-accent) !important;
+  background-image: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+@keyframes exBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
